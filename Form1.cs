@@ -95,11 +95,13 @@ namespace GraMemo
                 {
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
+                    firstClicked.BackColor = Color.White;
                     return;
                 }
 
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
+                secondClicked.BackColor = Color.White;
 
                 CheckForWinner();
 
@@ -118,8 +120,10 @@ namespace GraMemo
         {
             timer1.Stop();
 
-            firstClicked.ForeColor = firstClicked.BackColor;
-            secondClicked.ForeColor = secondClicked.BackColor;
+            firstClicked.ForeColor = Color.CornflowerBlue;
+            firstClicked.BackColor = Color.CornflowerBlue;
+            secondClicked.ForeColor = Color.CornflowerBlue;
+            secondClicked.BackColor = Color.CornflowerBlue;
 
             firstClicked = null;
             secondClicked = null;
