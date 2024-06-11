@@ -16,8 +16,8 @@ namespace GraMemo
 
         List<string> icons = new List<string>()
         {
-        "!", "!", "N", "N", ",", ",", "k", "k",
-        "b", "b", "v", "v", "w", "w", "z", "z"
+        "red", "czerwony", "green", "zielony", "violet", "fioletowy", "white", "biały",
+        "blue", "niebieski", "brown", "brązowy", "yellow", "żółty", "orange", "pomarańczowy"
         };
 
         Label firstClicked = null;
@@ -35,6 +35,39 @@ namespace GraMemo
                     iconLabel.Text = icons[randomNumber];
                     iconLabel.ForeColor = iconLabel.BackColor;
                     icons.RemoveAt(randomNumber);
+
+                    if (iconLabel.Text == "blue" || iconLabel.Text == "niebieski")
+                    {
+                        iconLabel.Tag = "Blue";
+                    }
+                    else if (iconLabel.Text == "red" || iconLabel.Text == "czerwony")
+                    {
+                        iconLabel.Tag = "Red";
+                    }
+                    else if (iconLabel.Text == "green" || iconLabel.Text == "zielony")
+                    {
+                        iconLabel.Tag = "Green";
+                    }
+                    else if (iconLabel.Text == "violet" || iconLabel.Text == "fioletowy")
+                    {
+                        iconLabel.Tag = "Violet";
+                    }
+                    else if (iconLabel.Text == "white" || iconLabel.Text == "biały")
+                    {
+                        iconLabel.Tag = "White";
+                    }
+                    else if (iconLabel.Text == "brown" || iconLabel.Text == "brązowy")
+                    {
+                        iconLabel.Tag = "Brown";
+                    }
+                    else if (iconLabel.Text == "yellow" || iconLabel.Text == "żółty")
+                    {
+                        iconLabel.Tag = "Yellow";
+                    }
+                    else if (iconLabel.Text == "orange" || iconLabel.Text == "pomarańczowy")
+                    {
+                        iconLabel.Tag = "Orange";
+                    }
                 }
             }
         }
@@ -70,7 +103,7 @@ namespace GraMemo
 
                 CheckForWinner();
 
-                if (firstClicked.Text == secondClicked.Text)
+                if (firstClicked.Tag == secondClicked.Tag)
                 {
                     firstClicked = null;
                     secondClicked = null;
