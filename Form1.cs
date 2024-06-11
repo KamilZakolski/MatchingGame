@@ -95,13 +95,13 @@ namespace GraMemo
                 {
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
-                    firstClicked.BackColor = Color.White;
+                    firstClicked.BackColor = Color.FromName(firstClicked.Tag.ToString());
                     return;
                 }
 
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
-                secondClicked.BackColor = Color.White;
+                secondClicked.BackColor = Color.FromName(secondClicked.Tag.ToString());
 
                 CheckForWinner();
 
