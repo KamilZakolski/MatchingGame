@@ -47,6 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnRestart = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -300,17 +303,49 @@
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnRestart
+            // 
+            this.btnRestart.BackColor = System.Drawing.Color.Gold;
+            this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRestart.Location = new System.Drawing.Point(599, 31);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(123, 68);
+            this.btnRestart.TabIndex = 1;
+            this.btnRestart.Text = "Start";
+            this.btnRestart.UseVisualStyleBackColor = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.YellowGreen;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label17.Location = new System.Drawing.Point(545, 411);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(114, 37);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Czas: ";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 494);
+            this.ClientSize = new System.Drawing.Size(778, 494);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "GraMemo";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -334,6 +369,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label17;
     }
 }
 

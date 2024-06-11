@@ -145,5 +145,15 @@ namespace GraMemo
             MessageBox.Show("Połączyłeś wszystkie pary!", "Gratulacje!");
             Close();
         }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
