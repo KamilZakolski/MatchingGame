@@ -23,6 +23,8 @@ namespace GraMemo
         Label firstClicked = null;
         Label secondClicked = null;
 
+        private int _ticks;
+
         private void AssignIconsToSquares()
         {
 
@@ -76,6 +78,7 @@ namespace GraMemo
         {
             InitializeComponent();
             AssignIconsToSquares();
+            timer2.Start();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -142,18 +145,20 @@ namespace GraMemo
                 }
             }
 
+            timer2.Stop();
             MessageBox.Show("Połączyłeś wszystkie pary!", "Gratulacje!");
             Close();
         }
 
-        private void btnRestart_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
+            _ticks++;
+            label17.Text = "Czas: " + _ticks.ToString() + " s";
+        }
 
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnRestart = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -303,20 +303,21 @@
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnRestart
+            // btnStart
             // 
-            this.btnRestart.BackColor = System.Drawing.Color.Gold;
-            this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRestart.Location = new System.Drawing.Point(599, 31);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(123, 68);
-            this.btnRestart.TabIndex = 1;
-            this.btnRestart.Text = "Start";
-            this.btnRestart.UseVisualStyleBackColor = false;
-            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            this.btnStart.BackColor = System.Drawing.Color.Gold;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnStart.Location = new System.Drawing.Point(599, 31);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(123, 68);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // timer2
             // 
+            this.timer2.Enabled = true;
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
@@ -324,10 +325,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.YellowGreen;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label17.Location = new System.Drawing.Point(545, 411);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label17.Location = new System.Drawing.Point(593, 414);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 37);
+            this.label17.Size = new System.Drawing.Size(99, 32);
             this.label17.TabIndex = 2;
             this.label17.Text = "Czas: ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,7 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 494);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.btnRestart);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
@@ -369,7 +370,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label17;
     }
